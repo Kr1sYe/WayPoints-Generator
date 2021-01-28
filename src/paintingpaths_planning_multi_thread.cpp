@@ -190,7 +190,7 @@ void thread_processing(const int width, const int nDivide, const int iHeight,
                 octomap::OcTreeNode* node=cloudAndUnknown.search(*it);	
                 if(node!=NULL){
                     cloudAndUnknown.updateNode(*it, false);
-                    Continue=false;
+                    Continue=false; 
 
                     if(!wall_index_waypoint_octkey.count(j))
                         wall_index_waypoint_octkey.insert(std::make_pair(j, *it));

@@ -1,6 +1,6 @@
-./include/aubo_kinematics.h
-./include/polishingrobot_planner
-./src/coveragestate_visualization
-./src/aubo_kinematics.cpp
-./src/moveit_collision_detection.cpp
+/include/aubo_kinematics.h
+/include/polishingrobot_planner
+/src/coveragestate_visualization
+/src/aubo_kinematics.cpp
+/src/moveit_collision_detection.cpp
 
