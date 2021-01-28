@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>coveragepaintingpathplanning</name>
+  <version>0.0.0</version>
+  <description>The coveragepaintingpathplanning package</description>
+  <maintainer email="k@todo.todo">k</maintainer>
+  <license>TODO</license>
+
+
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <depend>nav_msgs</depend>
+  <depend>octomap_msgs</depend>
+  <depend>octomap</depend>
+  <test_depend>rostest</test_depend>
+  <test_depend>rosunit</test_depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+
+  <build_depend>pluginlib</build_depend>
+  <build_depend>eigen</build_depend>
+  <build_depend>moveit_core</build_depend>
+  <build_depend>moveit_ros_planning</build_depend>
+  <build_depend>moveit_ros_planning_interface</build_depend>
+  <build_depend>moveit_ros_perception</build_depend>
+  <build_depend>interactive_markers</build_depend>
+  <build_depend>geometric_shapes</build_depend>
+  <build_depend>moveit_visual_tools</build_depend>
+  <build_depend>rviz_visual_tools</build_depend>
+  <build_depend>pcl_ros</build_depend>
+  <build_depend>pcl_conversions</build_depend>
+  <build_depend>rosbag</build_depend>
+  <build_depend>tf2_ros</build_depend>
+  <build_depend>tf2_eigen</build_depend>
+  <build_depend>tf2_geometry_msgs</build_depend>
+
+  <build_export_depend>pluginlib</build_export_depend>
+  <build_export_depend>eigen</build_export_depend>
+  <build_export_depend>moveit_core</build_export_depend>
+  <build_export_depend>moveit_ros_planning</build_export_depend>
+  <build_export_depend>moveit_ros_planning_interface</build_export_depend>
+  <build_export_depend>moveit_ros_perception</build_export_depend>
+  <build_export_depend>interactive_markers</build_export_depend>
+  <build_export_depend>geometric_shapes</build_export_depend>
+  <build_export_depend>moveit_visual_tools</build_export_depend>
+  <build_export_depend>rviz_visual_tools</build_export_depend>
+  <build_export_depend>pcl_ros</build_export_depend>
+  <build_export_depend>pcl_conversions</build_export_depend>
+  <build_export_depend>rosbag</build_export_depend>
+  <build_export_depend>tf2_ros</build_export_depend>
+  <build_export_depend>tf2_eigen</build_export_depend>
+  <build_export_depend>tf2_geometry_msgs</build_export_depend>
+
+  <exec_depend>pluginlib</exec_depend>
+  <exec_depend>eigen</exec_depend>
+  <exec_depend>moveit_core</exec_depend>
+  <exec_depend>moveit_ros_planning</exec_depend>
+  <exec_depend>moveit_ros_planning_interface</exec_depend>
+  <exec_depend>moveit_ros_perception</exec_depend>
+  <exec_depend>interactive_markers</exec_depend>
+  <exec_depend>geometric_shapes</exec_depend>
+  <exec_depend>moveit_visual_tools</exec_depend>
+  <exec_depend>rviz_visual_tools</exec_depend>
+  <exec_depend>pcl_ros</exec_depend>
+  <exec_depend>pcl_conversions</exec_depend>
+  <exec_depend>rosbag</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>tf2_eigen</exec_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
+
+  <export>
+  </export>
+</package>

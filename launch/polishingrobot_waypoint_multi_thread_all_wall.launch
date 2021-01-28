@@ -1,0 +1,83 @@
+<launch>
+
+  <arg name="xyz_file_wall_1" default="/home/k/paintingrobot_ws/src/xyz/wall_1.xyz"/>
+  <arg name="wall_1_pointcloud" default="wall_1_pointcloud"/>
+  <arg name="wall_1_octomap_pub" default="wall_1_octomap_pub"/>
+  <arg name="wall_1_markers_pub" default="wall_1_markers_pub"/>
+  <arg name="wall_1_fov_markers_pub" default="wall_1_fov_markers_pub"/>
+  <arg name="wall_1_fov_markers_pub2" default="wall_1_fov_markers_pub2"/>
+  <arg name="wall_1_saving_path" default="/home/k/paintingrobot_ws/wall_1_waypoints.json"/>
+
+  <arg name="xyz_file_wall_2" default="/home/k/paintingrobot_ws/src/xyz/wall_2.xyz"/>
+  <arg name="wall_2_pointcloud" default="wall_2_pointcloud"/>
+  <arg name="wall_2_octomap_pub" default="wall_2_octomap_pub"/>
+  <arg name="wall_2_markers_pub" default="wall_2_markers_pub"/>
+  <arg name="wall_2_fov_markers_pub" default="wall_2_fov_markers_pub"/>
+  <arg name="wall_2_fov_markers_pub2" default="wall_2_fov_markers_pub2"/>
+  <arg name="wall_2_saving_path" default="/home/k/paintingrobot_ws/wall_2_waypoints.json"/>
+
+  <arg name="xyz_file_wall_3" default="/home/k/paintingrobot_ws/src/xyz/wall_3.xyz"/>
+  <arg name="wall_3_pointcloud" default="wall_3_pointcloud"/>
+  <arg name="wall_3_octomap_pub" default="wall_3_octomap_pub"/>
+  <arg name="wall_3_markers_pub" default="wall_3_markers_pub"/>
+  <arg name="wall_3_fov_markers_pub" default="wall_3_fov_markers_pub"/>
+  <arg name="wall_3_fov_markers_pub2" default="wall_3_fov_markers_pub2"/>
+  <arg name="wall_3_saving_path" default="/home/k/paintingrobot_ws/wall_3_waypoints.json"/>
+
+  <arg name="xyz_file_wall_4" default="/home/k/paintingrobot_ws/src/xyz/wall_4.xyz"/>
+  <arg name="wall_4_pointcloud" default="wall_4_pointcloud"/>
+  <arg name="wall_4_octomap_pub" default="wall_4_octomap_pub"/>
+  <arg name="wall_4_markers_pub" default="wall_4_markers_pub"/>
+  <arg name="wall_4_fov_markers_pub" default="wall_4_fov_markers_pub"/>
+  <arg name="wall_4_fov_markers_pub2" default="wall_4_fov_markers_pub2"/>
+  <arg name="wall_4_saving_path" default="/home/k/paintingrobot_ws/wall_4_waypoints.json"/>
+
+  <!-- generate waypoints -->
+  <node name="paintingpaths_planning_multi_thread_1" pkg="coveragepaintingpathplanning" type="paintingpaths_planning_multi_thread" 
+    args = "$(arg xyz_file_wall_1)
+           $(arg wall_1_pointcloud)
+           $(arg wall_1_octomap_pub)
+           $(arg wall_1_markers_pub)
+           $(arg wall_1_fov_markers_pub)
+           $(arg wall_1_fov_markers_pub2)
+           $(arg wall_1_saving_path)"
+    respawn="false" output="screen">
+  </node>
+
+  <node name="paintingpaths_planning_multi_thread_2" pkg="coveragepaintingpathplanning" type="paintingpaths_planning_multi_thread" 
+    args = "$(arg xyz_file_wall_2)
+           $(arg wall_2_pointcloud)
+           $(arg wall_2_octomap_pub)
+           $(arg wall_2_markers_pub)
+           $(arg wall_2_fov_markers_pub)
+           $(arg wall_2_fov_markers_pub2)
+           $(arg wall_2_saving_path)"
+    respawn="false" output="screen">
+  </node>
+
+  <node name="paintingpaths_planning_multi_thread_3" pkg="coveragepaintingpathplanning" type="paintingpaths_planning_multi_thread" 
+    args = "$(arg xyz_file_wall_3)
+           $(arg wall_3_pointcloud)
+           $(arg wall_3_octomap_pub)
+           $(arg wall_3_markers_pub)
+           $(arg wall_3_fov_markers_pub)
+           $(arg wall_3_fov_markers_pub2)
+           $(arg wall_3_saving_path)"
+    respawn="false" output="screen">
+  </node>
+
+  <node name="paintingpaths_planning_multi_thread_4" pkg="coveragepaintingpathplanning" type="paintingpaths_planning_multi_thread" 
+    args = "$(arg xyz_file_wall_4)
+           $(arg wall_4_pointcloud)
+           $(arg wall_4_octomap_pub)
+           $(arg wall_4_markers_pub)
+           $(arg wall_4_fov_markers_pub)
+           $(arg wall_4_fov_markers_pub2)
+           $(arg wall_4_saving_path)"
+    respawn="false" output="screen">
+  </node>
+
+  <node name="paintingpaths_rviz_all" pkg="rviz" type="rviz" args="-d $(find coveragepaintingpathplanning)/config/all_waypoints.rviz" />
+
+
+</launch>

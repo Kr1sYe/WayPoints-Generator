@@ -1,0 +1,26 @@
+<launch>
+
+  <arg name="xyz_file" default="/home/k/paintingrobot_ws/src/xyz/wall_1.xyz"/>
+  <arg name="wall_pointcloud" default="wall_pointcloud"/>
+  <arg name="wall_octomap_pub" default="wall_octomap_pub"/>
+  <arg name="wall_markers_pub" default="wall_markers_pub"/>
+  <arg name="wall_fov_markers_pub" default="wall_fov_markers_pub"/>
+  <arg name="wall_fov_markers_pub2" default="wall_fov_markers_pub2"/>
+  <arg name="wall_saving_path" default="/home/k/paintingrobot_ws/wall_waypoints.json"/>
+
+  <!-- generate waypoints -->
+  <node name="paintingpaths_planning_multi_thread" pkg="coveragepaintingpathplanning" type="paintingpaths_planning_multi_thread" 
+    args = "$(arg xyz_file)
+           $(arg wall_pointcloud)
+           $(arg wall_octomap_pub)
+           $(arg wall_markers_pub)
+           $(arg wall_fov_markers_pub)
+           $(arg wall_fov_markers_pub2)
+           $(arg wall_saving_path)"
+    respawn="false" output="screen">
+  </node>
+
+  <node name="paintingpaths_rviz" pkg="rviz" type="rviz" args="-d $(find coveragepaintingpathplanning)/config/octomap.rviz" />
+
+
+</launch>
